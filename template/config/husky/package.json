@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog-zh": "^0.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx, vue}": "eslint --cache --cache-location .husky/_/.eslintcache --fix",
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "prepare":
+    "git init && husky install && husky add .husky/pre-commit \"pnpm exec lint-staged\" && husky add .husky/commit-msg \"pnpm exec commitlint --edit \"$1\"\""
+  }
+}

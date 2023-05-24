@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "shelljs": "^0.8.5",
+    "ssh2": "^1.13.0",
+    "ssh2-sftp-client": "^9.1.0"
+  },
+  "scripts": {
+    "publish:dev": "node scripts/deploy.js dev",
+    "publish:prod": "node scripts/deploy.js prod"
+  }
+}

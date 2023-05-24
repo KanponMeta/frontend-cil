@@ -1,10 +1,10 @@
 {
-  "name": "capsio-frontend-cli",
+  "name": "kanpon-frontend-cli",
   "version": "1.0.0",
-  "description": "An easy way to start a capsio frontend project",
+  "description": "An easy way to start a kanpon frontend project",
   "type": "module",
   "bin": {
-    "capsio-frontend-cli": "outfile.cjs"
+    "kanpon-frontend-cli": "outfile.cjs"
   },
   "files": [
     "outfile.cjs",

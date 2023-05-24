@@ -53,16 +53,16 @@ await esbuild.build({
         output: {
           file: 'LICENSE',
           template(allDependencies) {
-            // There's a bug in the plugin that it also includes the `capsio-frontend-cli` package itself
+            // There's a bug in the plugin that it also includes the `kanpon-frontend-cli` package itself
             const dependencies = allDependencies.filter(
-              (d) => d.packageJson.name !== 'capsio-frontend-cli'
+              (d) => d.packageJson.name !== 'kanpon-frontend-cli'
             )
             const licenseText =
-              `# capsio-frontend-cli core license\n\n` +
-              `capsio-frontend-cli is released under the MIT license:\n\n` +
+              `# kanpon-frontend-cli core license\n\n` +
+              `kanpon-frontend-cli is released under the MIT license:\n\n` +
               CORE_LICENSE +
               `\n## Licenses of bundled dependencies\n\n` +
-              `The published capsio-frontend-cli artifact additionally contains code with the following licenses:\n` +
+              `The published kanpon-frontend-cli artifact additionally contains code with the following licenses:\n` +
               [...new Set(dependencies.map((dependency) => dependency.packageJson.license))].join(
                 ', '
               ) +

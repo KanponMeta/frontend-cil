@@ -13,7 +13,7 @@ const eslintDeps = eslintTemplatePackage.devDependencies
 
 export default function renderEslint(
   rootDir,
-  { needsTypeScript, needsCypress, needsCypressCT, needsPrettier, isCapsio }
+  { needsTypeScript, needsCypress, needsCypressCT, needsPrettier, iskanpon }
 ) {
   const additionalConfig: Linter.Config = {}
   const additionalDependencies = {}
@@ -34,7 +34,7 @@ export default function renderEslint(
     additionalDependencies['eslint-plugin-cypress'] = eslintDeps['eslint-plugin-cypress']
   }
 
-  if (isCapsio) {
+  if (iskanpon) {
     additionalConfig.rules = {
       //关闭组件命名规则
       'vue/multi-word-component-names': 'off',

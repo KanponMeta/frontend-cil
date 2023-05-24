@@ -368,7 +368,7 @@ async function init() {
   const needsCypress = argv.cypress || argv.tests || needsE2eTesting === 'cypress'
   const needsCypressCT = needsCypress && !needsVitest
   const needsPlaywright = argv.playwright || needsE2eTesting === 'playwright'
-  const isCapsio = true
+  const iskanpon = true
 
   // 当前工作目录加项目名称组合出项目的根目录
   const root = path.join(cwd, targetDir)
@@ -447,8 +447,8 @@ async function init() {
     }
   }
 
-  // capsio default config
-  if (isCapsio) {
+  // kanpon default config
+  if (iskanpon) {
     render('config/axios')
     render('config/element-plus')
     render('config/sass')
@@ -460,15 +460,15 @@ async function init() {
   // 渲染生成 EsLint 配置
   // renderEslint 函数的实现流程和 renderTemplate 函数的实现流程类似。
   if (needsEslint) {
-    renderEslint(root, { needsTypeScript, needsCypress, needsCypressCT, needsPrettier, isCapsio })
+    renderEslint(root, { needsTypeScript, needsCypress, needsCypressCT, needsPrettier, iskanpon })
   }
 
   // Render code template.
   // prettier-ignore
 
   // 渲染生成代码模板
-  if (isCapsio) {
-    render('code/capsio-default')
+  if (iskanpon) {
+    render('code/kanpon-default')
   } else {
     const codeTemplate =
     (needsTypeScript ? 'typescript-' : '') +
@@ -477,8 +477,8 @@ async function init() {
   }
 
   // Render entry file (main.js/ts).
-  if (isCapsio && needsPinia && needsRouter) {
-    render('entry/capsio-default')
+  if (iskanpon && needsPinia && needsRouter) {
+    render('entry/kanpon-default')
   } else if (needsPinia && needsRouter) {
     render('entry/router-and-pinia')
   } else if (needsPinia) {

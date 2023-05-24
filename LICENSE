@@ -1,6 +1,6 @@
-# capsio-frontend-cli core license
+# kanpon-frontend-cli core license
 
-capsio-frontend-cli is released under the MIT license:
+kanpon-frontend-cli is released under the MIT license:
 
 MIT License
 
@@ -26,7 +26,7 @@ SOFTWARE.
 
 ## Licenses of bundled dependencies
 
-The published capsio-frontend-cli artifact additionally contains code with the following licenses:
+The published kanpon-frontend-cli artifact additionally contains code with the following licenses:
 MIT
 
 ## Bundled dependencies

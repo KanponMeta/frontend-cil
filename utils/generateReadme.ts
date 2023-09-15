@@ -43,7 +43,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ## Project Setup
 
 
-**<font color=Red size=5>We strongly recommend you use pnpm to replace npm</font>** 
+**<font color=Red size=5>We strongly recommend you use pnpm to replace npm</font>**
 
 
 `
@@ -140,5 +140,15 @@ ${commandFor('lint')}
 
   readme += npmScriptsDescriptions
 
+  readme += `
+  ### 操作手册：
+  \`\`\`sh
+  kanpon-frontend-cli 创建项目
+  git add .
+  git commit -m "feat: xxx"
+  git remote add origin git@xxx
+  git push -u origin master
+  \`\`\`
+  `
   return readme
 }

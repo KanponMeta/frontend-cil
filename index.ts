@@ -132,7 +132,7 @@ async function init() {
     needsPrettier?: boolean
   } = {
     needsTypeScript: true,
-    needsJsx: false,
+    needsJsx: true,
     needsRouter: true,
     needsPinia: true,
     needsVitest: false,
